@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , 'sans-serif';
+    box-sizing: border-box;     /*Box-sizing allows us to control how the width and height and element are calculated.
+                                By default, when you set the width and height of an element, it includes the content, padding, and border. 
+                                This can sometimes lead to unexpected sizing behavior.*/
+}
+body{
+    background-color: #222;
+}
+.card{
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00b2fe, #54878a);
+    color: #fff;
+    margin:100px auto 0;  /*100px margin at the top and 0 at the bottom*/
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align:center;
+}
+.search{      /*Here we're styling everything included in the "search" class. That is, the search input field and the search button which is an image.*/
+    width: 100%;
+    display: flex;   /*displays horizontally*/
+    align-items: center;
+    justify-content: space-between;  /*input field and search button are alligned horizontally opposite to each other*/
+}
+.search input{    /*Here we're styling only the search input field which is in the search class, reason why we wrote "search" before writing "input".*/
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;  /*flex: 0; (which is always by default) create a space between the elements in the flexbox, while flex:1; eliminates the space between them*/
+    margin-right: 18px;
+    font-size: 18px;
+}
+.search button{   /*Styling the button found in the "search" class*/
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.search button img{   /*Styling the search icon held by the img tag which is found in the button found in the "search" class*/
+    width: 22px;
+
+}
+.weatherIcon{
+    width: 170px;
+    margin-top: 30px;
+}
+.weather h1{
+    font-size: 80px;
+    font-weight:50;
+}
+.weather h2{
+    font-size: 45px;
+    font-weight:400;
+    margin-top: -10px;
+}
+.details{
+    display: flex;  /*flex because we'll have to create two columns*/
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;  /*) from top and bottom, 20px from left and right side*/
+    margin-top: 50px;
+
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+.humidity, .wind{
+    font-size: 28px;
+    margin-top: -6px;
+} 
+.weather{
+    display: none; 
+}
+.error{
+    text-align: left;
+    margin-left:10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;      /*hides the error message by default. it does not display it*/
+}
